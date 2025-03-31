@@ -542,9 +542,7 @@ function App() {
                       </div>
                     </div>
 
-                    <div className="absolute bottom-8 left-8 right-8 opacity-10">
-                      <Code size={180} />
-                    </div>
+                    
                   </div>
 
                   <div className="md:col-span-3 p-8">
