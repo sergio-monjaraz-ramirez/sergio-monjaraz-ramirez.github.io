@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Code, User, Briefcase, GraduationCap, Mail, Sun, Moon, Github, Linkedin, ArrowRight, ExternalLink } from "lucide-react";
 import Button from "./components/buttons/Button";
 import Badge from "./components/Badge";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/tabs";
+// import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/tabs";
+import Coso from "./components/Coso";
 import { Card, CardContent } from "./components/cards";
 
 function App() {
@@ -23,43 +24,38 @@ function App() {
   const projects = [
     {
       title: "Top Doctors - BeHIT",
-      description: ".",
+      description: "Implementation and migration of platform for hospital management, the project was done on angular 1 and was migrated to vue 3, using MEVN (Mongo, Express, Vue, Node) stack",
       technologies: ["Vue 3", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Adobe XD", "Typescript"],
-      image: "/placeholder.svg?height=200&width=350",
-      github: "#",
-      demo: "#",
+      image: "https://www.behit.net/images/logo.png",
+      demo: "https://www.behit.net/ES/index.html",
     },
     {
       title: "Softtek - BlueYonder",
       description: "Developing a custom React component library for application teams that delivers high performance and custom functionality for the company.",
       technologies: ["React JS", "Typescript", "Styled Components", "Storybook", "Jest", "Git", "Figma"],
-      image: "/placeholder.svg?height=200&width=350",
-      github: "#",
-      demo: "#",
+      image: "https://es.blueyonder.com/_next/image?url=https%3A%2F%2Fcdn.blueyonder.com%2Fglobal%2Fimages%2Flogo-dark.svg&w=256&q=75",
+      demo: "https://blueyonder.com/",
     },
     {
       title: "Citelis - Jac Mexico",
       description: "Implementation of a CRM for Jac Mexico (a partner brand) that help to improve his process of the sales and the tracking for each client also to providing data that helps decision making.",
       technologies: ["Vue JS", "Typescript", "Java", "PostgresSQL", "Flutter", "Tailwind CSS", "Figma"],
-      image: "/placeholder.svg?height=200&width=350",
-      github: "#",
-      demo: "#",
+      image: "https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/485104699_1087081600125521_6071726326193108068_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1D3u3ps4tbUQ7kNvgG-PXs_&_nc_oc=AdkJLhX4PNZobYuHnnw2dHUtKupCibTAbu7zGEISUrjnLWOba5NDp1m-WgcXztkuvqdmSOlYx44hL0w_ZpGNEuOn&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=GXje59Jd0M0jVe8qnVlZ6w&oh=00_AYHGogzrYihfuVhxZD6k_f9RFjrc4tOKCak10mh6styFlw&oe=67F018A4",
+      demo: "https://www.citelis.com.mx/",
     },
     {
       title: "Securitec (Beex)",
       description: "Developed a system omnichannel for customer service, using Vue, and WebRTC, this system is on the cloud and offerts a high customization .",
       technologies: ["Vue JS", "Python", "Figma", "Typescript", "WhatsApp API", "Twilio", "PostgresSQL"],
-      image: "/placeholder.svg?height=200&width=350",
-      github: "#",
-      demo: "#",
+      image: "https://multiwasap.com/wp-content/uploads/2022/10/securitec-1.png",
+      demo: "https://beexcc.com/",
     },
     {
       title: "Kiritek - Tres Marias Mexico",
       description: "Developed and improved processes for MyFrac Project using React JS, AWS and Java. That helped to grow project and improved sales of 100% in new neighborhoods.",
       technologies: ["React JS", "Java", "PostgresSQL", "AWS"],
-      image: "/placeholder.svg?height=200&width=350",
-      github: "#",
-      demo: "#",
+      image: "https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-1/335141978_155755060690366_2152455510833938026_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=smlY83owpBQQ7kNvgHA8sVm&_nc_oc=AdnlBZyepCJFcrsg3GmDxptwqjPCdnaY9_HUXQ9apjfpg8nr1gEBuBuUmihla2rp8xrQHMNIu__lVmnjaQTvxDDF&_nc_zt=24&_nc_ht=scontent-qro1-2.xx&_nc_gid=KvIyaAV6zqSSt2bupLLN9Q&oh=00_AYGTaFl1CcMot5THuwnU-Ti7W-akQukYHamxRdZuRNMbqw&oe=67F0234B",
+      demo: "https://kiritek.com/",
     }
   ]
 
@@ -169,7 +165,7 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400 hover:bg-teal-500/20 dark:hover:bg-teal-400/20">
+                <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400 hover:bg-teal-500/20 dark:hover:bg-teal-400/20">
                   Ingeniero de Software
                 </Badge>
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -231,7 +227,7 @@ function App() {
         <section id="about" className="py-20 bg-gray-100 dark:bg-gray-900/50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
+              <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
                 Sobre mí
               </Badge>
               <h2 className="text-3xl font-bold mb-4">Conóceme mejor</h2>
@@ -241,7 +237,7 @@ function App() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Mi historia</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
@@ -268,7 +264,25 @@ function App() {
 
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Mis habilidades</h3>
-                <Tabs defaultValue="Frontend" className="w-full">
+                <Coso className="w-full" tabs={skills.map((skill) => ({
+                  label: skill.category,
+                  content: (
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      {skill.items.map((item) => (
+                        <div
+                          key={item}
+                          className="p-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center gap-2"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></div>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ),
+                }))}>
+
+                </Coso>
+                {/* <Tabs defaultValue="Frontend" className="w-full">
                   <TabsList className="grid grid-cols-3 mb-6">
                     {skills.map((skill) => (
                       <TabsTrigger key={skill.category} value={skill.category}>
@@ -292,7 +306,7 @@ function App() {
                       </div>
                     </TabsContent>
                   ))}
-                </Tabs>
+                </Tabs> */}
               </div>
             </div>
           </div>
@@ -301,7 +315,7 @@ function App() {
         <section id="projects" className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
+              <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
                 Proyectos
               </Badge>
               <h2 className="text-3xl font-bold mb-4">Mi trabajo reciente</h2>
@@ -324,14 +338,10 @@ function App() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end justify-between p-4">
                         <div className="flex gap-3">
-                          <a
-                            href={project.github}
-                            className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
-                          >
-                            <Github size={18} className="text-white" />
-                          </a>
+           
                           <a
                             href={project.demo}
+                            target="_blank"
                             className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
                           >
                             <ExternalLink size={18} className="text-white" />
@@ -346,7 +356,7 @@ function App() {
                         {project.technologies.map((tech) => (
                           <Badge
                             key={tech}
-                            className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border-0"
+                            className="!bg-gray-100 dark:bg-gray-700 !text-gray-800 dark:text-gray-200 border-0"
                           >
                             {tech}
                           </Badge>
@@ -388,7 +398,7 @@ function App() {
 
                   <Card className="flex-1 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                     <CardContent className="p-6">
-                      <Badge className="mb-2 bg-indigo-500/10 text-indigo-500 dark:bg-indigo-400/10 dark:text-indigo-400">
+                      <Badge className="mb-2 bg-indigo-500/10 !text-indigo-500 dark:bg-indigo-400/10 dark:text-indigo-400">
                         {item.period}
                       </Badge>
                       <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
@@ -405,7 +415,7 @@ function App() {
         <section id="contact" className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
+              <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
                 Contacto
               </Badge>
               <h2 className="text-3xl font-bold mb-4">¿Hablamos?</h2>
