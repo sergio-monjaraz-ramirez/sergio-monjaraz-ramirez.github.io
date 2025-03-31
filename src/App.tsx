@@ -20,11 +20,11 @@ import { Card, CardContent } from "./components/cards";
 
 function App() {
   const navItems = [
-    { id: "home", label: "Inicio", icon: <Code size={18} /> },
-    { id: "about", label: "Sobre mí", icon: <User size={18} /> },
-    { id: "projects", label: "Proyectos", icon: <Briefcase size={18} /> },
-    { id: "education", label: "Educación", icon: <GraduationCap size={18} /> },
-    { id: "contact", label: "Contacto", icon: <Mail size={18} /> },
+    { id: "home", label: "Home", icon: <Code size={18} /> },
+    { id: "about", label: "About Me", icon: <User size={18} /> },
+    { id: "projects", label: "Projects", icon: <Briefcase size={18} /> },
+    { id: "education", label: "Education", icon: <GraduationCap size={18} /> },
+    { id: "contact", label: "Contact", icon: <Mail size={18} /> },
   ];
 
   const skills = [
@@ -42,7 +42,7 @@ function App() {
     },
     { category: "Backend", items: ["Node.js", "Java", "Go", "MongoDB", "SQL"] },
     {
-      category: "Herramientas",
+      category: "Tools",
       items: ["Git", "GitHub", "VS Code", "Figma", "Atlassian"],
     },
   ];
@@ -142,32 +142,32 @@ function App() {
   const education = [
     {
       period: "2009 - 2015",
-      title: "Ingeniería en Sistemas Computacionales",
-      institution: "Tecnológico Nacional de México - Campus Morelia",
+      title: "Computer Systems Engineering",
+      institution: "National Technological Institute of Mexico - Morelia Campus",
       description:
-        "Estudios centrados en desarrollo, programación e ingeneria de software.",
+        "Studies focused on development, programming, and software engineering.",
     },
     {
-      period: "2015 -2017 ",
-      title: "Maestría en Tecnologia Avanzada",
+      period: "2015 - 2017",
+      title: "Master's in Advanced Technology",
       institution:
-        "Instituto Politécnico Nacional - Centro de Inovacion en Ciencia Aplicada y Tecnología Avanzadas",
+        "National Polytechnic Institute - Center for Innovation in Applied Science and Advanced Technology",
       description:
-        "Formación avanzada en tecnologías como vision por computadora, machine learning y procesamiento de imágenes.",
+        "Advanced training in technologies such as computer vision, machine learning, and image processing.",
     },
     {
-      period: "En curso",
-      title: "Certificación en Vue JS",
-      institution: "Plataforma Online",
+      period: "Ongoing",
+      title: "Vue JS Certification",
+      institution: "Online Platform",
       description:
-        "Certificación en desarrollo de aplicaciones web utilizando Vue.js, un framework progresivo para construir interfaces de usuario.",
+        "Certification in web application development using Vue.js, a progressive framework for building user interfaces.",
     },
   ];
 
   const [activeSection, setActiveSection] = useState("home");
   const [darkMode, setDarkMode] = useState(true);
 
-  // Cambiar tema claro/oscuro
+  // Change theme to light/dark
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -176,7 +176,7 @@ function App() {
     }
   }, [darkMode]);
 
-  // Cambiar sección activa basado en scroll
+  // Change active section based on scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -237,10 +237,10 @@ function App() {
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
             <Button
-              onClick={() => alert("Contactar")}
+              onClick={() => alert("Contact")}
               className="hidden md:flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0"
             >
-              Contactar
+              Contact
             </Button>
           </div>
         </div>
@@ -253,31 +253,30 @@ function App() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400 hover:bg-teal-500/20 dark:hover:bg-teal-400/20">
-                  Ingeniero de Software
+                  Software Engineer
                 </Badge>
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                  Hola, Soy{" "}
+                  Hello, I'm{" "}
                   <span className="bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">
                     Sergio Monjaraz
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  Ingeniero de software apasionado por crear experiencias web
-                  atractivas y funcionales.
+                  Software engineer passionate about creating engaging and functional web experiences.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button
                     onClick={() => alert("goToProjects")}
                     className="flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0"
                   >
-                    Ver proyectos{" "}
+                    View Projects{" "}
                     <ArrowRight className="ml-2 flex self-center h-4 w-4" />
                   </Button>
                   <Button
                     onClick={() => alert("download")}
                     className="border-gray-300 dark:border-gray-700 border-2  dark:bg-black dark:hover:bg-gray-800 hover:bg-gray-300  rounded-md px-4 py-2 flex items-center"
                   >
-                    Descargar CV
+                    Download CV
                   </Button>
                 </div>
 
@@ -309,7 +308,7 @@ function App() {
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-gray-200 dark:border-gray-800 overflow-hidden relative z-10">
                     <img
                       src="/images/foto.jpeg"
-                      alt="Tu foto"
+                      alt="Your photo"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -323,32 +322,22 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
-                Sobre mí
+                About Me
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Conóceme mejor</h2>
+              <h2 className="text-3xl font-bold mb-4">Get to know me better</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Soy un ingeniero de software apasionado por la tecnología y el
-                desarrollo web. Me encanta aprender nuevas herramientas y
-                frameworks para mejorar mis habilidades y ofrecer soluciones
-                innovadoras.
+                I am a software engineer passionate about technology and web development. I love learning new tools and frameworks to improve my skills and offer innovative solutions.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-semibold mb-4">Mi historia</h3>
+                <h3 className="text-2xl font-semibold mb-4">My Story</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Ingeniero de software con más de 7 años de experiencia en
-                  desarrollo web. Disfruto colaborar en equipos
-                  multidisciplinarios, promoviendo buenas prácticas de
-                  desarrollo y contribuyendo activamente a la mejora continua.
-                  Me considero proactivo y autodidacta, con facilidad para
-                  adaptarme a nuevos desafíos tecnológicos.
+                  Software engineer with over 7 years of experience in web development. I enjoy collaborating in multidisciplinary teams, promoting good development practices, and actively contributing to continuous improvement. I consider myself proactive and self-taught, with ease to adapt to new technological challenges.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Actualmente estoy enfocado en el desarrollo frontend con React
-                  y Vue pero también tengo experiencia con Node.js y bases de
-                  datos.
+                  Currently, I am focused on frontend development with React and Vue but also have experience with Node.js and databases.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
@@ -357,7 +346,7 @@ function App() {
                       7+
                     </div>
                     <div className="text-gray-600 dark:text-gray-300">
-                      Años de experiencia
+                      Years of experience
                     </div>
                   </div>
                   <div className="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm">
@@ -365,14 +354,14 @@ function App() {
                       6+
                     </div>
                     <div className="text-gray-600 dark:text-gray-300">
-                      Proyectos completados
+                      Completed projects
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Mis habilidades</h3>
+                <h3 className="text-2xl font-semibold mb-6">My Skills</h3>
                 <Coso
                   className="w-full"
                   tabs={skills.map((skill) => ({
@@ -401,12 +390,11 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
-                Proyectos
+                Projects
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Mi trabajo reciente</h2>
+              <h2 className="text-3xl font-bold mb-4">My Recent Work</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Aquí hay una selección de proyectos en los que he trabajado
-                recientemente.
+                Here is a selection of projects I have recently worked on.
               </p>
             </div>
 
@@ -464,13 +452,13 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
-                Educación
+                Education
               </Badge>
               <h2 className="text-3xl font-bold mb-4">
-                Mi formación académica
+                My Academic Background
               </h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Mi trayectoria educativa y formación profesional.
+                My educational trajectory and professional training.
               </p>
             </div>
 
@@ -512,11 +500,11 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
-                Contacto
+                Contact
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">¿Hablamos?</h2>
+              <h2 className="text-3xl font-bold mb-4">Shall we talk?</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                ¿Interesado en trabajar juntos o tienes alguna pregunta?
+                Interested in working together or have any questions?
               </p>
             </div>
 
@@ -525,11 +513,10 @@ function App() {
                 <div className="grid md:grid-cols-5">
                   <div className="md:col-span-2 bg-gradient-to-br from-teal-500 to-indigo-500 p-8 text-white">
                     <h3 className="text-2xl font-semibold mb-6">
-                      Información de contacto
+                      Contact Information
                     </h3>
                     <p className="mb-8 opacity-90">
-                      Completa el formulario y me pondré en contacto contigo lo
-                      antes posible.
+                      Complete the form and I will get in touch with you as soon as possible.
                     </p>
 
                     <div className="space-y-6">
@@ -566,7 +553,7 @@ function App() {
                             htmlFor="name"
                             className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
                           >
-                            Nombre
+                            Name
                           </label>
                           <input
                             type="text"
@@ -593,7 +580,7 @@ function App() {
                           htmlFor="subject"
                           className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
                         >
-                          Asunto
+                          Subject
                         </label>
                         <input
                           type="text"
@@ -606,7 +593,7 @@ function App() {
                           htmlFor="message"
                           className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
                         >
-                          Mensaje
+                          Message
                         </label>
                         <textarea
                           id="message"
@@ -615,7 +602,7 @@ function App() {
                         />
                       </div>
                       <Button className="w-full bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0">
-                        Enviar mensaje
+                        Send Message
                       </Button>
                     </form>
                   </div>
