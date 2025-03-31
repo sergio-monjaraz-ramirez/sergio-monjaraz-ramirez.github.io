@@ -1,5 +1,17 @@
 import { useEffect, useState } from "react";
-import { Code, User, Briefcase, GraduationCap, Mail, Sun, Moon, Github, Linkedin, ArrowRight, ExternalLink } from "lucide-react";
+import {
+  Code,
+  User,
+  Briefcase,
+  GraduationCap,
+  Mail,
+  Sun,
+  Moon,
+  Github,
+  Linkedin,
+  ArrowRight,
+  ExternalLink,
+} from "lucide-react";
 import Button from "./components/buttons/Button";
 import Badge from "./components/Badge";
 // import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/tabs";
@@ -16,81 +28,153 @@ function App() {
   ];
 
   const skills = [
-    { category: "Frontend", items: ["HTML", "CSS", "TypeScript", "React", "Vue", "Angular", "Tailwind CSS"] },
+    {
+      category: "Frontend",
+      items: [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "React",
+        "Vue",
+        "Angular",
+        "Tailwind CSS",
+      ],
+    },
     { category: "Backend", items: ["Node.js", "Java", "Go", "MongoDB", "SQL"] },
-    { category: "Herramientas", items: ["Git", "GitHub", "VS Code", "Figma", "Atlassian"] },
-  ]
+    {
+      category: "Herramientas",
+      items: ["Git", "GitHub", "VS Code", "Figma", "Atlassian"],
+    },
+  ];
 
   const projects = [
     {
-      title: "Top Doctors - BeHIT",
-      description: "Implementation and migration of platform for hospital management, the project was done on angular 1 and was migrated to vue 3, using MEVN (Mongo, Express, Vue, Node) stack",
-      technologies: ["Vue 3", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Adobe XD", "Typescript"],
+      title: "BeHIT",
+      description:
+        "Implementation and migration of platform for hospital management, the project was done on angular 1 and was migrated to vue 3, using MEVN (Mongo, Express, Vue, Node) stack",
+      technologies: [
+        "Vue 3",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Tailwind CSS",
+        "Adobe XD",
+        "Typescript",
+      ],
       image: "https://www.behit.net/images/logo.png",
       demo: "https://www.behit.net/ES/index.html",
     },
     {
-      title: "Softtek - BlueYonder",
-      description: "Developing a custom React component library for application teams that delivers high performance and custom functionality for the company.",
-      technologies: ["React JS", "Typescript", "Styled Components", "Storybook", "Jest", "Git", "Figma"],
-      image: "https://es.blueyonder.com/_next/image?url=https%3A%2F%2Fcdn.blueyonder.com%2Fglobal%2Fimages%2Flogo-dark.svg&w=256&q=75",
+      title: "BlueYonder",
+      description:
+        "Developing a custom React component library for application teams that delivers high performance and custom functionality for the company.",
+      technologies: [
+        "React JS",
+        "Typescript",
+        "Styled Components",
+        "Storybook",
+        "Jest",
+        "Git",
+        "Figma",
+      ],
+      image:
+        "https://es.blueyonder.com/_next/image?url=https%3A%2F%2Fcdn.blueyonder.com%2Fglobal%2Fimages%2Flogo-dark.svg&w=256&q=75",
       demo: "https://blueyonder.com/",
     },
     {
-      title: "Citelis - Jac Mexico",
-      description: "Implementation of a CRM for Jac Mexico (a partner brand) that help to improve his process of the sales and the tracking for each client also to providing data that helps decision making.",
-      technologies: ["Vue JS", "Typescript", "Java", "PostgresSQL", "Flutter", "Tailwind CSS", "Figma"],
-      image: "https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/485104699_1087081600125521_6071726326193108068_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1D3u3ps4tbUQ7kNvgG-PXs_&_nc_oc=AdkJLhX4PNZobYuHnnw2dHUtKupCibTAbu7zGEISUrjnLWOba5NDp1m-WgcXztkuvqdmSOlYx44hL0w_ZpGNEuOn&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=GXje59Jd0M0jVe8qnVlZ6w&oh=00_AYHGogzrYihfuVhxZD6k_f9RFjrc4tOKCak10mh6styFlw&oe=67F018A4",
+      title: "Citelis | Jac Mexico",
+      description:
+        "Implementation of a CRM for Jac Mexico (a partner brand) that help to improve his process of the sales and the tracking for each client also to providing data that helps decision making.",
+      technologies: [
+        "Vue JS",
+        "Typescript",
+        "Java",
+        "PostgresSQL",
+        "Flutter",
+        "Tailwind CSS",
+        "Figma",
+      ],
+      image:
+        "https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/485104699_1087081600125521_6071726326193108068_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1D3u3ps4tbUQ7kNvgG-PXs_&_nc_oc=AdkJLhX4PNZobYuHnnw2dHUtKupCibTAbu7zGEISUrjnLWOba5NDp1m-WgcXztkuvqdmSOlYx44hL0w_ZpGNEuOn&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=GXje59Jd0M0jVe8qnVlZ6w&oh=00_AYHGogzrYihfuVhxZD6k_f9RFjrc4tOKCak10mh6styFlw&oe=67F018A4",
       demo: "https://www.citelis.com.mx/",
     },
     {
       title: "Securitec (Beex)",
-      description: "Developed a system omnichannel for customer service, using Vue, and WebRTC, this system is on the cloud and offerts a high customization .",
-      technologies: ["Vue JS", "Python", "Figma", "Typescript", "WhatsApp API", "Twilio", "PostgresSQL"],
-      image: "https://multiwasap.com/wp-content/uploads/2022/10/securitec-1.png",
+      description:
+        "Developed a system omnichannel for customer service, using Vue, and WebRTC, this system is on the cloud and offerts a high customization .",
+      technologies: [
+        "Vue JS",
+        "Python",
+        "Figma",
+        "Typescript",
+        "WhatsApp API",
+        "Twilio",
+        "PostgresSQL",
+      ],
+      image:
+        "https://multiwasap.com/wp-content/uploads/2022/10/securitec-1.png",
       demo: "https://beexcc.com/",
     },
     {
-      title: "Kiritek - Tres Marias Mexico",
-      description: "Developed and improved processes for MyFrac Project using React JS, AWS and Java. That helped to grow project and improved sales of 100% in new neighborhoods.",
+      title: "Kiritek | Tres Marias Mexico",
+      description:
+        "Developed and improved processes for MyFrac Project using React JS, AWS and Java. That helped to grow project and improved sales of 100% in new neighborhoods.",
       technologies: ["React JS", "Java", "PostgresSQL", "AWS"],
-      image: "https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-1/335141978_155755060690366_2152455510833938026_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=smlY83owpBQQ7kNvgHA8sVm&_nc_oc=AdnlBZyepCJFcrsg3GmDxptwqjPCdnaY9_HUXQ9apjfpg8nr1gEBuBuUmihla2rp8xrQHMNIu__lVmnjaQTvxDDF&_nc_zt=24&_nc_ht=scontent-qro1-2.xx&_nc_gid=KvIyaAV6zqSSt2bupLLN9Q&oh=00_AYGTaFl1CcMot5THuwnU-Ti7W-akQukYHamxRdZuRNMbqw&oe=67F0234B",
+      image:
+        "https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-1/335141978_155755060690366_2152455510833938026_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=smlY83owpBQQ7kNvgHA8sVm&_nc_oc=AdnlBZyepCJFcrsg3GmDxptwqjPCdnaY9_HUXQ9apjfpg8nr1gEBuBuUmihla2rp8xrQHMNIu__lVmnjaQTvxDDF&_nc_zt=24&_nc_ht=scontent-qro1-2.xx&_nc_gid=KvIyaAV6zqSSt2bupLLN9Q&oh=00_AYGTaFl1CcMot5THuwnU-Ti7W-akQukYHamxRdZuRNMbqw&oe=67F0234B",
       demo: "https://kiritek.com/",
+    },
+    {
+      title: "Legalex GS",
+      description:
+        "Contributed to design a mobile app to e-signature to help users to signature docs from mobile devices",
+      technologies: [
+        "Java",
+        "Android",
+        "PostgresSQL",
+      ],
+      image:
+        "https://grupotron-gs.com/grupotron/assets/images/single-serv/Legalex.jpg",
+      demo: "https://www.legalexgs.com/",
     }
-  ]
+  ];
 
   const education = [
     {
       period: "2009 - 2015",
       title: "Ingeniería en Sistemas Computacionales",
       institution: "Tecnológico Nacional de México - Campus Morelia",
-      description: "Estudios centrados en desarrollo, programación e ingeneria de software.",
+      description:
+        "Estudios centrados en desarrollo, programación e ingeneria de software.",
     },
     {
       period: "2015 -2017 ",
       title: "Maestría en Tecnologia Avanzada",
-      institution: "Instituto Politécnico Nacional - Centro de Inovacion en Ciencia Aplicada y Tecnología Avanzadas",
-      description: "Formación avanzada en tecnologías como vision por computadora, machine learning y procesamiento de imágenes.",
+      institution:
+        "Instituto Politécnico Nacional - Centro de Inovacion en Ciencia Aplicada y Tecnología Avanzadas",
+      description:
+        "Formación avanzada en tecnologías como vision por computadora, machine learning y procesamiento de imágenes.",
     },
     {
       period: "En curso",
       title: "Certificación en Vue JS",
       institution: "Plataforma Online",
-      description: "Certificación en desarrollo de aplicaciones web utilizando Vue.js, un framework progresivo para construir interfaces de usuario.",
+      description:
+        "Certificación en desarrollo de aplicaciones web utilizando Vue.js, un framework progresivo para construir interfaces de usuario.",
     },
-  ]
+  ];
 
   const [activeSection, setActiveSection] = useState("home");
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(true);
 
-   // Cambiar tema claro/oscuro
-   useEffect(() => {
+  // Cambiar tema claro/oscuro
+  useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   // Cambiar sección activa basado en scroll
   useEffect(() => {
@@ -146,7 +230,10 @@ function App() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button onClick={() => setDarkMode(!darkMode)} className="rounded-full bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800/50 p-2">
+            <Button
+              onClick={() => setDarkMode(!darkMode)}
+              className="rounded-full bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800/50 p-2"
+            >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
             <Button
@@ -171,17 +258,25 @@ function App() {
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">
                   Hola, Soy{" "}
                   <span className="bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">
-                  Sergio Monjaraz
+                    Sergio Monjaraz
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                  Desarrollador full-stack apasionado por crear experiencias web atractivas y funcionales.
+                  Ingeniero de software apasionado por crear experiencias web
+                  atractivas y funcionales.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button onClick={()=>alert('goToProjects')} className="flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0">
-                    Ver proyectos <ArrowRight className="ml-2 flex self-center h-4 w-4" />
+                  <Button
+                    onClick={() => alert("goToProjects")}
+                    className="flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0"
+                  >
+                    Ver proyectos{" "}
+                    <ArrowRight className="ml-2 flex self-center h-4 w-4" />
                   </Button>
-                  <Button onClick={()=>alert('download')}  className="border-gray-300 dark:border-gray-700 border-2  dark:bg-black dark:hover:bg-gray-800 hover:bg-gray-300  rounded-md px-4 py-2 flex items-center">
+                  <Button
+                    onClick={() => alert("download")}
+                    className="border-gray-300 dark:border-gray-700 border-2  dark:bg-black dark:hover:bg-gray-800 hover:bg-gray-300  rounded-md px-4 py-2 flex items-center"
+                  >
                     Descargar CV
                   </Button>
                 </div>
@@ -208,16 +303,16 @@ function App() {
                 </div>
               </div>
 
-              <div >
+              <div>
                 <div className="relative">
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-teal-500 to-indigo-500 blur-3xl opacity-20 absolute -inset-4"></div>
-                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-gray-200 dark:border-gray-800 overflow-hidden relative z-10">
+                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-gray-200 dark:border-gray-800 overflow-hidden relative z-10">
                     <img
                       src="/images/foto.jpeg"
                       alt="Tu foto"
                       className="w-full h-full object-cover"
                     />
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -232,7 +327,9 @@ function App() {
               </Badge>
               <h2 className="text-3xl font-bold mb-4">Conóceme mejor</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Soy un desarrollador web junior con pasión por aprender nuevas tecnologías y crear soluciones
+                Soy un ingeniero de software apasionado por la tecnología y el
+                desarrollo web. Me encanta aprender nuevas herramientas y
+                frameworks para mejorar mis habilidades y ofrecer soluciones
                 innovadoras.
               </p>
             </div>
@@ -241,58 +338,46 @@ function App() {
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Mi historia</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Soy un desarrollador web junior con pasión por aprender nuevas tecnologías y crear soluciones
-                  innovadoras. Mi objetivo es combinar diseño y funcionalidad para crear experiencias de usuario
-                  excepcionales.
+                  Ingeniero de software con más de 7 años de experiencia en
+                  desarrollo web. Disfruto colaborar en equipos
+                  multidisciplinarios, promoviendo buenas prácticas de
+                  desarrollo y contribuyendo activamente a la mejora continua.
+                  Me considero proactivo y autodidacta, con facilidad para
+                  adaptarme a nuevos desafíos tecnológicos.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Actualmente estoy enfocado en el desarrollo frontend con React, pero también tengo experiencia con
-                  Node.js y bases de datos. Me encanta resolver problemas y colaborar en equipos multidisciplinarios.
+                  Actualmente estoy enfocado en el desarrollo frontend con React
+                  y Vue pero también tengo experiencia con Node.js y bases de
+                  datos.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm">
-                    <div className="text-3xl font-bold text-teal-500 dark:text-teal-400 mb-1">7+</div>
-                    <div className="text-gray-600 dark:text-gray-300">Años de experiencia</div>
+                    <div className="text-3xl font-bold text-teal-500 dark:text-teal-400 mb-1">
+                      7+
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-300">
+                      Años de experiencia
+                    </div>
                   </div>
                   <div className="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm">
-                    <div className="text-3xl font-bold text-indigo-500 dark:text-indigo-400 mb-1">6+</div>
-                    <div className="text-gray-600 dark:text-gray-300">Proyectos completados</div>
+                    <div className="text-3xl font-bold text-indigo-500 dark:text-indigo-400 mb-1">
+                      6+
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-300">
+                      Proyectos completados
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Mis habilidades</h3>
-                <Coso className="w-full" tabs={skills.map((skill) => ({
-                  label: skill.category,
-                  content: (
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                      {skill.items.map((item) => (
-                        <div
-                          key={item}
-                          className="p-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center gap-2"
-                        >
-                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></div>
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  ),
-                }))}>
-
-                </Coso>
-                {/* <Tabs defaultValue="Frontend" className="w-full">
-                  <TabsList className="grid grid-cols-3 mb-6">
-                    {skills.map((skill) => (
-                      <TabsTrigger key={skill.category} value={skill.category}>
-                        {skill.category}
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
-
-                  {skills.map((skill) => (
-                    <TabsContent key={skill.category} value={skill.category} className="mt-0">
+                <Coso
+                  className="w-full"
+                  tabs={skills.map((skill) => ({
+                    label: skill.category,
+                    content: (
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {skill.items.map((item) => (
                           <div
@@ -304,9 +389,9 @@ function App() {
                           </div>
                         ))}
                       </div>
-                    </TabsContent>
-                  ))}
-                </Tabs> */}
+                    ),
+                  }))}
+                ></Coso>
               </div>
             </div>
           </div>
@@ -320,15 +405,14 @@ function App() {
               </Badge>
               <h2 className="text-3xl font-bold mb-4">Mi trabajo reciente</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Aquí hay una selección de proyectos en los que he trabajado recientemente.
+                Aquí hay una selección de proyectos en los que he trabajado
+                recientemente.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <div
-                  key={index}
-                >
+                <div key={index}>
                   <Card className="overflow-hidden h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                     <div className="relative">
                       <img
@@ -338,7 +422,6 @@ function App() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end justify-between p-4">
                         <div className="flex gap-3">
-           
                           <a
                             href={project.demo}
                             target="_blank"
@@ -350,8 +433,12 @@ function App() {
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech) => (
                           <Badge
@@ -367,26 +454,29 @@ function App() {
                 </div>
               ))}
             </div>
-
           </div>
         </section>
 
-        <section id="education" className="py-20 bg-gray-100 dark:bg-gray-900/50">
+        <section
+          id="education"
+          className="py-20 bg-gray-100 dark:bg-gray-900/50"
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <Badge className="mb-4 bg-teal-500/10 text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
                 Educación
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Mi formación académica</h2>
-              <p className="text-gray-600 dark:text-gray-300">Mi trayectoria educativa y formación profesional.</p>
+              <h2 className="text-3xl font-bold mb-4">
+                Mi formación académica
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                Mi trayectoria educativa y formación profesional.
+              </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
               {education.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex gap-6 mb-12 last:mb-0"
-                >
+                <div key={index} className="flex gap-6 mb-12 last:mb-0">
                   <div className="hidden sm:block pt-1">
                     <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm">
                       <div className="w-3 h-3 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></div>
@@ -401,9 +491,15 @@ function App() {
                       <Badge className="mb-2 bg-indigo-500/10 !text-indigo-500 dark:bg-indigo-400/10 dark:text-indigo-400">
                         {item.period}
                       </Badge>
-                      <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 mb-4">{item.institution}</p>
-                      <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+                      <h3 className="text-xl font-semibold mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 mb-4">
+                        {item.institution}
+                      </p>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        {item.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
@@ -428,9 +524,12 @@ function App() {
               <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 overflow-hidden">
                 <div className="grid md:grid-cols-5">
                   <div className="md:col-span-2 bg-gradient-to-br from-teal-500 to-indigo-500 p-8 text-white">
-                    <h3 className="text-2xl font-semibold mb-6">Información de contacto</h3>
+                    <h3 className="text-2xl font-semibold mb-6">
+                      Información de contacto
+                    </h3>
                     <p className="mb-8 opacity-90">
-                      Completa el formulario y me pondré en contacto contigo lo antes posible.
+                      Completa el formulario y me pondré en contacto contigo lo
+                      antes posible.
                     </p>
 
                     <div className="space-y-6">
@@ -525,7 +624,6 @@ function App() {
             </div>
           </div>
         </section>
-
       </main>
     </div>
   );
