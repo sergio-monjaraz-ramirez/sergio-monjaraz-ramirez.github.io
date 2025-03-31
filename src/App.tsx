@@ -282,19 +282,21 @@ function App() {
 
                 <div className="mt-12 flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/sergio-monjaraz-ramirez"
+                    target="_blank"
                     className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
                   >
                     <Github size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/sergio-monjaraz-ramirez/"
+                    target="_blank"
                     className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
                   >
                     <Linkedin size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="mailto:mta.sergio.monjaraz@gmail.com"
                     className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
                   >
                     <Mail size={20} />
