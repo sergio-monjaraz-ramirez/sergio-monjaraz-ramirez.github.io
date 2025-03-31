@@ -237,7 +237,7 @@ function App() {
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
             <Button
-              onClick={() => alert("Contact")}
+              onClick={() => window.scrollTo({ top: document.getElementById("contact")?.offsetTop, behavior: "smooth" })}
               className="hidden md:flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0"
             >
               Contact
@@ -266,14 +266,14 @@ function App() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button
-                    onClick={() => alert("goToProjects")}
+                    onClick={() => window.scrollTo({ top: document.getElementById("projects")?.offsetTop, behavior: "smooth" })}
                     className="flex bg-gradient-to-r from-teal-500 to-indigo-500 hover:from-teal-600 hover:to-indigo-600 text-white border-0"
                   >
                     View Projects{" "}
                     <ArrowRight className="ml-2 flex self-center h-4 w-4" />
                   </Button>
                   <Button
-                    onClick={() => alert("download")}
+                    onClick={() => window.open("/docs/Sergio_Monjaraz_CV_2025.pdf", "_blank")}
                     className="border-gray-300 dark:border-gray-700 border-2  dark:bg-black dark:hover:bg-gray-800 hover:bg-gray-300  rounded-md px-4 py-2 flex items-center"
                   >
                     Download CV
@@ -502,7 +502,7 @@ function App() {
               <Badge className="mb-4 bg-teal-500/10 !text-teal-500 dark:bg-teal-400/10 dark:text-teal-400">
                 Contact
               </Badge>
-              <h2 className="text-3xl font-bold mb-4">Shall we talk?</h2>
+              <h2 className="text-3xl font-bold mb-4">Let's talk</h2>
               <p className="text-gray-600 dark:text-gray-300">
                 Interested in working together or have any questions?
               </p>
