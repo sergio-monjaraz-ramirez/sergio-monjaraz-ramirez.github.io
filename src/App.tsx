@@ -273,7 +273,7 @@ function App() {
                     <ArrowRight className="ml-2 flex self-center h-4 w-4" />
                   </Button>
                   <Button
-                    onClick={() => window.open("/docs/Sergio_Monjaraz_CV_2025.pdf", "_blank")}
+                    onClick={() => window.open("/docs/Sergio_Monjaraz_CV.pdf", "_blank")}
                     className="border-gray-300 dark:border-gray-700 border-2  dark:bg-black dark:hover:bg-gray-800 hover:bg-gray-300  rounded-md px-4 py-2 flex items-center"
                   >
                     Download CV
