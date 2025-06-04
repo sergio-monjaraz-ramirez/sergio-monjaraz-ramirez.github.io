@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rocket_ Sub
+* source:	https://sketchfab.com/3d-models/rocket--sub-470a7baf6def4a47b5b2de944481644f
+* author:	Piterus13 (https://sketchfab.com/piotrekmiratynski)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rocket_ Sub" (https://sketchfab.com/3d-models/rocket--sub-470a7baf6def4a47b5b2de944481644f) by Piterus13 (https://sketchfab.com/piotrekmiratynski) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
