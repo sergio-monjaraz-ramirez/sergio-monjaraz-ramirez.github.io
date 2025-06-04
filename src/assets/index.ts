@@ -22,10 +22,11 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import vue from "./tech/vue.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import kiritek from "./company/kiritek.png";
+import citelis from "./company/citelis.png";
+import blueyonder from "./company/blueyonder.jpeg";
+import topdoctors from "./company/topdoctors.png";
+
 
 
 export {
@@ -50,9 +51,9 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,  
-  starbucks,
-  tesla,
-  vue
+  vue,
+  kiritek,
+  citelis,
+  blueyonder,
+  topdoctors
 };
