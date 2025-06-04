@@ -42,7 +42,6 @@ const Hero: React.FC = () => {
         <Avatar url="/images/foto.jpeg" />
       </div>
 
-      {/* <ComputersCanvas /> */}
     </section>
   );
 };

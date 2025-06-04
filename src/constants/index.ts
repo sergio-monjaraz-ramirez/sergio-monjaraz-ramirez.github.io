@@ -15,11 +15,11 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   vue,
+  kiritek,
+  citelis,
+  blueyonder,
+  topdoctors,
 } from "../assets";
 import { Mail, Github, Linkedin } from "lucide-react";
 
@@ -116,7 +116,7 @@ const experiences = [
   {
     title: "Jr Frontend Developer",
     company_name: "Kiritek",
-    icon: meta,
+    icon: kiritek,
     iconBg: "#E6DEDD",
     date: "Feb 2017 - Feb 2020",
     points: [
@@ -129,7 +129,7 @@ const experiences = [
   {
     title: "Frontend Developer",
     company_name: "Citelis",
-    icon: shopify,
+    icon: citelis,
     iconBg: "#383E56",
     date: "Feb 2020 - April 2022",
     points: [
@@ -142,7 +142,7 @@ const experiences = [
   {
     title: "Software Engineer",
     company_name: "Blueyonder",
-    icon: tesla,
+    icon: blueyonder,
     iconBg: "#E6DEDD",
     date: "April 2022 - Aug 2024",
     points: [
@@ -155,7 +155,7 @@ const experiences = [
   {
     title: "SrFrontend Developer",
     company_name: "Top Doctors",
-    icon: starbucks,
+    icon: topdoctors,
     iconBg: "#383E56",
     date: "Aug 2022 - May 2025",
     points: [
