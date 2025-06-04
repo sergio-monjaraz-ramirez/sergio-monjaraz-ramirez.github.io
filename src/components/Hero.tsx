@@ -1,8 +1,9 @@
+import { socialMedia } from "../constants";
 import { styles } from "../styles/styles";
 import Avatar from "./Avatar";
 import Badge from "./Badge";
-import { Mail, Github, Linkedin } from "lucide-react";
-// import { ComputersCanvas } from "./canvas";
+import IconButton from "./buttons/IconButton";
+
 
 const Hero: React.FC = () => {
   return (
@@ -25,26 +26,17 @@ const Hero: React.FC = () => {
             web experiences.
           </p>
           <div className="mt-2 flex gap-4">
-            <a
-              href="https://github.com/sergio-monjaraz-ramirez"
-              target="_blank"
-              className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-teal-400 transition-colors"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sergio-monjaraz-ramirez/"
-              target="_blank"
-              className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-teal-400 transition-colors"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="mailto:mta.sergio.monjaraz@gmail.com"
-              className="p-2 rounded-full bg-gray-800 text-gray-300 hover:text-teal-400 transition-colors"
-            >
-              <Mail size={20} />
-            </a>
+            {
+              socialMedia.map((social, index) => (
+                <IconButton
+                  key={index}
+                  href={social.href}
+                  
+                >
+                  <social.icon size={20} />
+                </IconButton>
+              ))
+            }
           </div>
         </div>
         <Avatar url="/images/foto.jpeg" />
